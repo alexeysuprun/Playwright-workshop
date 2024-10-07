@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test.skip('Basic Navigation', async ({page})=>{
+test('Basic Navigation', async ({page})=>{
     await page.goto("https://about.gitlab.com");
     await page.waitForTimeout(3000);
     await page.reload();
 });
 
-test.skip('Interacting with Web Element on GitLab', async ({page})=>{
+test('Interacting with Web Element on GitLab', async ({page})=>{
     await page.goto("https://about.gitlab.com");
     await page.locator('#be-navigation-desktop').getByRole('link', {name: 'Get free trial'}).click();
     // await page.locator('[data-testid="new-user-first-name-field"]').fill('John');
