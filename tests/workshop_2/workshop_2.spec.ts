@@ -23,7 +23,7 @@ test('Automation Form Submissions', async ({page})=>{
 });
 
 
-test.only('Handling form', async ({page})=>{
+test('Handling form', async ({page})=>{
     await page.goto("https://demo.playwright.dev/todomvc");
     const placeholder = '[placeholder="What needs to be done?"]';
 
